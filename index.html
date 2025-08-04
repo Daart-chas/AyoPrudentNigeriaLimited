@@ -5,8 +5,338 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayo Prudent Nigeria Limited | Diversified Business & Services</title>
     <meta name="description" content="Ayo Prudent Nigeria Limited is a leading enterprise in Oil & Gas, Supermarket, Eatery, Lubricant sales, and Gift Items. Discover our diverse services and quality products.">
-    <link rel="stylesheet" href="style.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Basic Reset */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #1e3a8a; /* A deep blue */
+            color: white;
+            padding: 20px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #fdd835; /* A golden yellow for hover */
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero-image.jpg'); /* Replace 'hero-image.jpg' */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero .container {
+            max-width: 800px;
+        }
+
+        .hero h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #fdd835; /* Golden yellow */
+            color: #1e3a8a; /* Deep blue */
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background-color: #fbc02d;
+        }
+
+        /* About Us Section Styling */
+        .about-us {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .about-us h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-us .container p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Services Section Styling */
+        .services {
+            padding: 60px 0;
+            background-color: #e9f1fa; /* A light blue background */
+        }
+
+        .services h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2e7d32; /* A green color for service titles */
+            margin-bottom: 15px;
+        }
+
+        .service-item p {
+            color: #555;
+        }
+
+        /* Testimonials Section Styling */
+        .testimonials {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .testimonials h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-item {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            font-style: italic;
+            color: #666;
+        }
+
+        .testimonial-item blockquote {
+            margin-bottom: 20px;
+        }
+
+        .client-name {
+            font-style: normal;
+            font-weight: bold;
+            color: #333;
+            text-align: right;
+        }
+
+        .testimonial-cta {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Contact Section Styling */
+        .contact {
+            padding: 60px 0;
+            background-color: #d0e8fa; /* Another light blue */
+        }
+
+        .contact h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-details h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        .contact-details p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .contact-details strong {
+            font-weight: 600;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links p {
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-links img {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-links img:hover {
+            opacity: 1;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+
+        footer .container {
+            padding: 0 20px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header nav {
+                margin-top: 15px;
+            }
+
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -37,7 +367,7 @@
             <h2>About Ayo Prudent Nigeria Limited</h2>
             <p>Ayo Prudent Nigeria Limited is a multifaceted enterprise dedicated to delivering excellence and innovation across various critical sectors of the Nigerian economy. With a steadfast commitment to quality, integrity, and unparalleled customer satisfaction, we aim to be a trusted partner in your success.</p>
             <p>Our diverse portfolio allows us to leverage extensive expertise and resources, creating synergistic opportunities that benefit all our stakeholders. We are driven by a vision to contribute significantly to the economic development of the nation through sustainable and impactful business practices.</p>
-            </div>
+        </div>
     </section>
 
     <section id="services" class="services">
@@ -103,14 +433,14 @@
                 <div class="contact-details">
                     <h3>Contact Information</h3>
                     <p><strong>Email:</strong> info@ayoprudentnigeria.com </p>
-                    <p><strong>Phone:</strong> +234 703 089 9566 (Placeholder)</p>
-                    <p><strong>Address:</strong> 123 Prudent Road, Business District, Lagos, Nigeria (Placeholder)</p>
-                    <!-- <p>Feel free to replace these with your uncle's actual contact details.</p> -->
+                    <p><strong>Phone:</strong> 07030899566</p>
+                    <p><strong>Address:</strong> Oke, Omisanjana, Ado Ekiti</p>
+                    <p><strong>Registration No:</strong> RC 775187</p>
                     <div class="social-links">
                         <p>Connect with us:</p>
                         <a href="#" target="_blank" aria-label="Ayo Prudent on Facebook"><img src="https://via.placeholder.com/30/3b5998/ffffff?text=F" alt="Facebook icon"></a>
                         <a href="#" target="_blank" aria-label="Ayo Prudent on LinkedIn"><img src="https://via.placeholder.com/30/0077B5/ffffff?text=L" alt="LinkedIn icon"></a>
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
